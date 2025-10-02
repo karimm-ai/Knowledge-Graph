@@ -1,10 +1,19 @@
 import kagglehub
 import pandas as pd
 import json
+from falkordb import FalkorDB
 
 #path = kagglehub.dataset_download("saurabhbagchi/books-dataset")
 #print("Path to dataset files:", path)
 json_file = "book_schema.json"
+db = FalkorDB(host='localhost', port=6379)
+
+g = db.select_graph("book_graph")
+g.delete()
+
+g = db.select_graph('book_graph')
+
+
 
 def load_json(path):
     with open(path, "r") as f:
@@ -13,21 +22,21 @@ def load_json(path):
 
 def create_book_query(isbn, title):
     q = f"""
-        CREATE (b:Book {{isbn: '{isbn.replace('"', "")}', title: '{title.replace('"', "")}'}})
+        CREATE (b:Book {{isbn: "{isbn.replace('"', "")}", title: "{title.replace('"', "")}"}})
     """
     return q.strip()
 
 
 def create_author_query(name):
     q = f"""
-    CREATE (a:Author {{name: '{name.replace('"', "")}'}})
+    CREATE (a:Author {{name: "{name.replace('"', "")}"}})
     """
     return q.strip()
 
 
 def create_publisher_query(name):
     q = f"""
-    CREATE (p:Publisher {{name: '{name.replace('"', "")}'}})
+    CREATE (p:Publisher {{name: "{name.replace('"', "")}"}})
     """
     return q.strip()
 
@@ -42,7 +51,8 @@ def create_relationship_query(from_label,
     
     def format_val(val):
         if isinstance(val, str):
-            return f"'{val.replace('', '')}'"
+            val = val.replace("'", "\\'")
+            return f"'{val}'"
         else:
             return str(val)
     
@@ -52,6 +62,14 @@ def create_relationship_query(from_label,
 
     """
     return q.strip()
+
+
+def print_queries(queries):
+    for query in queries:
+        g.query(query)
+        print(query)
+
+
 
 
 
@@ -74,17 +92,17 @@ def create_schema(data):
     for key, value in data["nodes"].items():
         key_props = ", ".join([f"{prop}: '{value}'" for prop, value in value.items()])
         q = f"""
-            CREATE (:'{key}' {{{key_props}}})
-
+            CREATE (:{key} {{{key_props}}})
         """
+        g.query(q)
         print(q)
 
     create_schema_relationships(data)
     
 
-def print_queries(queries):
-    for query in queries:
-        print(query)
+
+
+
 
 
 def construct_knowledge_graph(df):
@@ -110,6 +128,9 @@ def construct_knowledge_graph(df):
     print(f"RELATIONSHIP QUERIES:\n")
     print_queries(rel_queries)
     print("\n\n")
+
+
+
 
 
 if __name__ == "__main__":
