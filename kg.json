@@ -1,0 +1,234 @@
+{
+  "graph_name": "university_knowledge_graph",
+
+  "universities_data": {
+    "Stanford University": {
+      "name": "Stanford University",
+      "location": "Palo Alto, California",
+      "founded_year": 1885,
+      "type": "Private Research University",
+      "ranking": 3
+    },
+    "MIT": {
+      "name": "MIT",
+      "location": "Cambridge, Massachusetts",
+      "founded_year": 1861,
+      "type": "Private Research University",
+      "ranking": 1
+    },
+    "UC Berkeley": {
+      "name": "UC Berkeley",
+      "location": "Berkeley, California",
+      "founded_year": 1868,
+      "type": "Public Research University",
+      "ranking": 5
+    }
+  },
+
+  "departments_data": {
+    "Computer Science (Stanford)": {
+      "name": "Computer Science",
+      "budget": 15000000,
+      "head": "Dr. Sarah Wilson",
+      "student_count": 1200,
+      "university": "Stanford University"
+    },
+    "Electrical Engineering": {
+      "name": "Electrical Engineering", 
+      "budget": 12000000, 
+      "head": "Dr. Michael Chen", 
+      "student_count": 800, 
+      "university": "Stanford University"
+    },
+    "Computer Science (MIT)": {
+      "name": "Computer Science",
+      "budget": 18000000,
+      "head": "Dr. Alan Turing",
+      "student_count": 1500,
+      "university": "MIT"
+    },
+    "Mathematics": {
+      "name": "Mathematics", 
+      "budget": 8000000, 
+      "head": "Dr. Emmy Noether", 
+      "student_count": 600, 
+      "university": "MIT"
+    },
+    "Computer Science (Berkeley)": {
+      "name": "Computer Science", 
+      "budget": 14000000, 
+      "head": "Dr. Barbara Liskov", 
+      "student_count": 1100, 
+      "university": "UC Berkeley"
+    }
+  },
+
+  "professors_data": {
+    "Dr. Alice Johnson": {
+      "name": "Dr. Alice Johnson", 
+      "title": "Full Professor", 
+      "research_area": "Machine Learning", 
+      "tenure": "Yes", 
+      "email": "alice@stanford.edu", 
+      "office": "Gates 415", 
+      "department": "Computer Science",
+      "university": "Stanford University"
+    },
+    "Dr. Bob Smith": {
+      "name": "Dr. Bob Smith", 
+      "title": "Associate Professor", 
+      "research_area": "Computer Vision", 
+      "tenure": "Yes", 
+      "email": "bob@stanford.edu", 
+      "office": "Gates 420", 
+      "department": "Computer Science", 
+      "university": "Stanford University"
+    },
+    "Dr. Carol Davis": {
+      "name": "Dr. Carol Davis", 
+      "title": "Assistant Professor", 
+      "research_area": "Natural Language Processing", 
+      "tenure": "No", 
+      "email": "carol@stanford.edu", 
+      "office": "Gates 425", 
+      "department": "Computer Science", 
+      "university": "Stanford University"
+    },
+    "Dr. David Wilson": {
+      "name": "Dr. David Wilson", 
+      "title": "Full Professor", 
+      "research_area": "Robotics", 
+      "tenure": "Yes", 
+      "email": "david@mit.edu", 
+      "office": "Stata 32-G882", 
+      "department": "Computer Science", 
+      "university": "MIT"
+    },
+    "Dr. Eva Martinez": {
+      "name": "Dr. Eva Martinez", 
+      "title": "Associate Professor", 
+      "research_area": "Algorithms", 
+      "tenure": "Yes", 
+      "email": "eva@mit.edu", 
+      "office": "Stata 32-G876", 
+      "department": "Mathematics", 
+      "university": "MIT"
+    }
+  },
+
+  "students_data": {
+    "John Doe": {
+      "name": "John Doe", 
+      "student_id": "S001", 
+      "major": "Computer Science", 
+      "gpa": 3.85, 
+      "year": 3, 
+      "status": "Active", 
+      "university": "Stanford University"
+    },
+    "Jane Smith": {
+      "name": "Jane Smith", 
+      "student_id": "S002", 
+      "major": "Computer Science", 
+      "gpa": 3.92, 
+      "year": 4, 
+      "status": "Active", 
+      "university": "Stanford University"
+    },
+    "Mike Johnson": {
+      "name": "Mike Johnson", 
+      "student_id": "S003", 
+      "major": "Computer Science", 
+      "gpa": 3.67, 
+      "year": 2, 
+      "status": "Active", 
+      "university": "MIT"
+    },
+    "Sarah Wilson": {
+      "name": "Sarah Wilson", 
+      "student_id": "S004", 
+      "major": "Mathematics", 
+      "gpa": 3.78, 
+      "year": 3, 
+      "status": "Active", 
+      "university": "MIT"
+    },
+    "Alex Brown": {
+      "name": "Alex Brown", 
+      "student_id": "S005", 
+      "major": "Computer Science", 
+      "gpa": 3.55, 
+      "year": 1, 
+      "status": "Active", 
+      "university": "UC Berkeley"
+    }
+  },
+   
+  "courses_data": {
+    "CS106A": {
+      "code": "CS106A", 
+      "name": "Programming Methodology", 
+      "credits": 5, 
+      "level": "Undergraduate", 
+      "semester": "Fall 2024", 
+      "capacity": 300, 
+      "university": "Stanford University"
+    },
+    "CS229": {
+      "code": "CS229", 
+      "name": "Machine Learning", 
+      "credits": 4, 
+      "level": "Graduate", 
+      "semester": "Fall 2024", 
+      "capacity": 200, 
+      "university": "Stanford University"
+    },
+    "CS231N": {
+      "code": "CS231N", 
+      "name": "Computer Vision", 
+      "credits": 4, 
+      "level": "Graduate", 
+      "semester": "Spring 2024", 
+      "capacity": 150, 
+      "university": "Stanford University"
+    },
+    "6.034": {
+      "code": "6.034", 
+      "name": "Artificial Intelligence", 
+      "credits": 4, 
+      "level": "Undergraduate", 
+      "semester": "Fall 2024", 
+      "capacity": 180, 
+      "university": "MIT"
+    },
+    "18.06": {
+      "code": "18.06", 
+      "name": "Linear Algebra", 
+      "credits": 4, 
+      "level": "Undergraduate", 
+      "semester": "Fall 2024", 
+      "capacity": 250, 
+      "university": "MIT"
+    }
+  },
+
+  "buildings_data": {
+    "Gates Computer Science Building": {
+      "name": "Gates Computer Science Building", 
+      "address": "353 Jane Stanford Way", 
+      "floors": 4, 
+      "capacity": 2000, 
+      "type": "Academic", 
+      "university": "Stanford University"
+    },
+    "Stata Center": {
+      "name": "Stata Center", 
+      "address": "32 Vassar St", 
+      "floors": 17, 
+      "capacity": 3000, 
+      "type": "Academic", 
+      "university": "MIT"
+    }
+  }
+
+}

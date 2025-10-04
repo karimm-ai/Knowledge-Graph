@@ -6,8 +6,8 @@ from falkordb import FalkorDB
 #path = kagglehub.dataset_download("saurabhbagchi/books-dataset")
 #print("Path to dataset files:", path)
 json_file = "book_schema.json"
-db = FalkorDB(host='localhost', port=6379)
 
+db = FalkorDB(host='localhost', port=6379)
 g = db.select_graph("book_graph")
 g.delete()
 

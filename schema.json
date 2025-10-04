@@ -1,0 +1,94 @@
+{
+  "graph_name": "ontology_university_schema",
+
+  "nodes": {
+    "University": {
+      "name": "string",
+      "location": "string",
+      "founded_year": "integer",
+      "type": "string",
+      "ranking": "integer"
+    },
+    "Department": {
+      "dept_name": "string",
+      "budget": "float",
+      "head": "string",
+      "building": "string",
+      "student_count": "integer"
+    },
+    "Professor": {
+      "name": "string",
+      "title": "string",
+      "research_area": "string",
+      "tenure": "boolean",
+      "email": "string",
+      "office": "string"
+    },
+    "Student": {
+      "name": "string",
+      "student_id": "string",
+      "major": "string",
+      "gpa": "float",
+      "year": "integer",
+      "status": "string"
+    },
+    "Course": {
+      "code": "string",
+      "name": "string",
+      "credits": "integer",
+      "level": "string",
+      "semester": "string",
+      "capacity": "integer"
+    },
+    "Building": {
+      "name": "string",
+      "address": "string",
+      "floors": "integer",
+      "capacity": "integer",
+      "type": "string"
+    },
+    "Research": {
+      "title": "string",
+      "field": "string",
+      "funding": "float",
+      "duration": "integer",
+      "status": "string"
+    },
+    "Publication": {
+      "title": "string",
+      "journal": "string",
+      "year": "integer",
+      "citations": "integer",
+      "type": "string"
+    },
+    "Degree": {
+      "name": "string",
+      "level": "string",
+      "requirements": "string",
+      "duration": "integer"
+    },
+    "Semester": {
+      "name": "string",
+      "year": "integer",
+      "start_date": "string",
+      "end_date": "string"
+    }
+  },
+
+  "relationships": {
+    "PART_OF": { "from": "Department", "to": "University" },
+    "WORKS_IN": { "from": "Professor", "to": "Department" },
+    "BELONGS_TO": { "from": "Student", "to": "Department" },
+    "OFFERED_BY": { "from": "Course", "to": "Department" },
+    "TEACHES": { "from": "Professor", "to": "Course" },
+    "ENROLLED_IN": { "from": "Student", "to": "Course" },
+    "CONDUCTS": { "from": "Professor", "to": "Research" },
+    "AUTHORED": { "from": "Professor", "to": "Publication" },
+    "FUNDED_BY": { "from": "Research", "to": "University" },
+    "HELD_IN": { "from": "Course", "to": "Building" },
+    "LOCATED_AT": { "from": "Building", "to": "University" },
+    "PURSUING": { "from": "Student", "to": "Degree" },
+    "OFFERED_IN": { "from": "Course", "to": "Semester" }
+  }
+  
+}
