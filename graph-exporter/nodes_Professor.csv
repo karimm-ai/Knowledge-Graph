@@ -1,0 +1,6 @@
+id,name,title,research_area,tenure,email,office
+8,Dr. Alice Johnson,Full Professor,Machine Learning,Yes,alice@stanford.edu,Gates 415
+9,Dr. Bob Smith,Associate Professor,Computer Vision,Yes,bob@stanford.edu,Gates 420
+10,Dr. Carol Davis,Assistant Professor,Natural Language Processing,No,carol@stanford.edu,Gates 425
+11,Dr. David Wilson,Full Professor,Robotics,Yes,david@mit.edu,Stata 32-G882
+12,Dr. Eva Martinez,Associate Professor,Algorithms,Yes,eva@mit.edu,Stata 32-G876

@@ -1,0 +1,6 @@
+id,name,student_id,major,gpa,year,status
+13,John Doe,S001,Computer Science,3.85,3,Active
+14,Jane Smith,S002,Computer Science,3.92,4,Active
+15,Mike Johnson,S003,Computer Science,3.67,2,Active
+16,Sarah Wilson,S004,Mathematics,3.78,3,Active
+17,Alex Brown,S005,Computer Science,3.55,1,Active

@@ -1,0 +1,6 @@
+id,dept_name,budget,head,student_count,building
+3,Computer Science,15000000,Dr. Sarah Wilson,1200,Computer Science Building
+4,Electrical Engineering,12000000,Dr. Michael Chen,800,Electrical Engineering Building
+5,Computer Science,18000000,Dr. Alan Turing,1500,Computer Science Building
+6,Mathematics,8000000,Dr. Emmy Noether,600,Mathematics Building
+7,Computer Science,14000000,Dr. Barbara Liskov,1100,Computer Science Building
